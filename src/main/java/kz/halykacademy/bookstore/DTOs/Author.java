@@ -1,4 +1,4 @@
-package kz.halykacademy.bookstore;
+package kz.halykacademy.bookstore.DTOs;
 
 import java.time.LocalDate;
 import java.util.List;
