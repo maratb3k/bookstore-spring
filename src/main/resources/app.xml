@@ -4,8 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+<!--    ********   BOOKS   ***********                         -->
     <bean id="bookService" class="kz.halykacademy.bookstore.services.BookServiceRealization">
-        <constructor-arg ref="bookRepo" />
+        <constructor-arg ref="bookRepository" />
     </bean>
 
     <bean id="bookProvider" class="kz.halykacademy.bookstore.providers.BookProviderRealization"> </bean>
@@ -15,6 +17,19 @@
     </bean>
 
     <bean id="bookRepository" class="kz.halykacademy.bookstore.repository.BookRepo"></bean>
+
+
+<!--    ****************    AUTHORS        ************-->
+    <bean id="authorService" class="kz.halykacademy.bookstore.services.AuthorServiceRealization">
+        <constructor-arg ref="authorRepository" />
+    </bean>
+
+    <bean id="AuthorController" class="kz.halykacademy.bookstore.controllers.AuthorController">
+        <constructor-arg ref="authorService" />
+    </bean>
+
+    <bean id="AuthorRepository" class="kz.halykacademy.bookstore.repository.AuthorRepository"></bean>
+
 
 
 </beans>
