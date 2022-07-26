@@ -28,8 +28,18 @@
         <constructor-arg ref="authorService" />
     </bean>
 
-    <bean id="AuthorRepository" class="kz.halykacademy.bookstore.repository.AuthorRepository"></bean>
+    <bean id="authorRepository" class="kz.halykacademy.bookstore.repository.AuthorRepository"></bean>
 
 
+<!--    *** PUBLISHERS *** -->
+    <bean id="publisherService" class="kz.halykacademy.bookstore.services.PublisherServiceRealization">
+        <constructor-arg ref="publisherRepository" />
+    </bean>
+
+    <bean id="publisherController" class="kz.halykacademy.bookstore.controllers.PublisherController">
+        <constructor-arg ref="publisherService" />
+    </bean>
+
+    <bean id="publisherRepository" class="kz.halykacademy.bookstore.repository.PublisherRepository"></bean>
 
 </beans>
