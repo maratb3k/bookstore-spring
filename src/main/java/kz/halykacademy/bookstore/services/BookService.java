@@ -1,7 +1,6 @@
 package kz.halykacademy.bookstore.services;
 
 import kz.halykacademy.bookstore.DTOs.Book;
-
 import java.util.List;
 
 public interface BookService {
@@ -12,4 +11,6 @@ public interface BookService {
     List<Book> getBooks();
     Book updateBook(Book book);
     String deleteBook(long id);
+    public List<Book> findBooksByName(String name);
+
 }

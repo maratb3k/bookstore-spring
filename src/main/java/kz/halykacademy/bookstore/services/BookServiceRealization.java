@@ -57,4 +57,9 @@ public class BookServiceRealization implements BookService {
         existingBook.setProductionYear(book.getProductionYear());
         return repository.save(existingBook);
     }
+
+    @Override
+    public List<Book> findBooksByName(String name) {
+        return bookRepository.getBooksByMatchingName(name);
+    }
 }

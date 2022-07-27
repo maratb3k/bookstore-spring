@@ -42,4 +42,9 @@ public class BookController {
     public String deleteBook(@PathVariable long id) {
         return bookService.deleteBook(id);
     }
+
+    @RequestMapping(value = "/books/{name}", method = RequestMethod.GET)
+    public List<Book> findBooksByName(@PathVariable String name) {
+        return bookService.findBooksByName(name);
+    }
 }
