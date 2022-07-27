@@ -10,14 +10,16 @@ public class Author {
     private String middlename;
     private LocalDate dateOfBirth;
     private List<Book> books;
+    private List<Genre> genres;
 
-    public Author(long id, String surname, String name, String middlename, LocalDate dateOfBirth, List<Book> books) {
+    public Author(long id, String surname, String name, String middlename, LocalDate dateOfBirth, List<Book> books, List<Genre> genres) {
         this.id = id;
         this.surname = surname;
         this.name = name;
         this.middlename = middlename;
         this.dateOfBirth = dateOfBirth;
         this.books = books;
+        this.genres = genres;
     }
 
     public long getId() {
@@ -68,6 +70,14 @@ public class Author {
         this.books = books;
     }
 
+    public List<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
@@ -77,6 +87,7 @@ public class Author {
                 ", middlename='" + middlename + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", books=" + books +
+                ", genres=" + genres +
                 '}';
     }
 }

@@ -10,8 +10,9 @@ public class Book {
     private String name;
     private int numOfPages;
     private int productionYear;
+    private List<Genre> genres;
 
-    public Book(long id, double price, List<Author> authors, Publisher publisher, String name, int numOfPages, int productionYear) {
+    public Book(long id, double price, List<Author> authors, Publisher publisher, String name, int numOfPages, int productionYear, List<Genre> genres) {
         this.id = id;
         this.price = price;
         this.authors = authors;
@@ -19,6 +20,7 @@ public class Book {
         this.name = name;
         this.numOfPages = numOfPages;
         this.productionYear = productionYear;
+        this.genres = genres;
     }
 
     public long getId() {
@@ -77,6 +79,14 @@ public class Book {
         this.productionYear = productionYear;
     }
 
+    public List<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -87,6 +97,7 @@ public class Book {
                 ", name='" + name + '\'' +
                 ", numOfPages=" + numOfPages +
                 ", productionYear=" + productionYear +
+                ", genres=" + genres +
                 '}';
     }
 }
