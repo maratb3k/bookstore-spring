@@ -52,4 +52,9 @@ public class AuthorServiceRealization implements AuthorService{
         authorRepository.deleteById(id);
         return "Author deleted " + id;
     }
+
+    @Override
+    public List<Author> findAuthorsByName(String name) {
+        return authorRepository.getAuthorsByMatchingName(name);
+    }
 }

@@ -1,8 +1,6 @@
 package kz.halykacademy.bookstore.services;
 
 import kz.halykacademy.bookstore.DTOs.Author;
-import kz.halykacademy.bookstore.DTOs.Book;
-
 import java.util.List;
 
 public interface AuthorService {
@@ -13,5 +11,7 @@ public interface AuthorService {
     List<Author> getAuthors();
     Author updateAuthor(Author author);
     String deleteAuthor(long id);
+
+    public List<Author> findAuthorsByName(String name);
 
 }

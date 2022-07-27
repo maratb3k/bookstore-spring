@@ -43,4 +43,9 @@ public class AuthorController {
         return authorService.deleteAuthor(id);
     }
 
+    @RequestMapping(value = "/authors/{name}", method = RequestMethod.GET)
+    public List<Author> findAuthorsByName(@PathVariable String name) {
+        return authorService.findAuthorsByName(name);
+    }
+
 }
