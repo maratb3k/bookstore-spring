@@ -1,5 +1,4 @@
 package kz.halykacademy.bookstore.services;
-
 import kz.halykacademy.bookstore.DTOs.Publisher;
 import kz.halykacademy.bookstore.repository.PublisherRepository;
 
@@ -45,5 +44,10 @@ public class PublisherServiceRealization implements PublisherService {
     public String deletePublisher(long id) {
         publisherRepository.deleteById(id);
         return "Publisher removed " + id;
+    }
+
+    @Override
+    public List<Publisher> findPublishersByName(String name) {
+        return publisherRepository.getPublishersByMatchingName(name);
     }
 }

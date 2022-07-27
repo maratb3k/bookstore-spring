@@ -46,4 +46,9 @@ public class PublisherController {
         return publisherService.deletePublisher(id);
     }
 
+    @RequestMapping(value = "/publishers/{name}", method = RequestMethod.GET)
+    public List<Publisher> findPublishersByName(@PathVariable String name) {
+        return publisherService.findPublishersByName(name);
+    }
+
 }
